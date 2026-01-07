@@ -1,1 +1,4 @@
-# PHP_teszt_csapat2
+## Pest projekt
+- Luo Hong Jun
+- Hajba Bálint
+- Vörös Bence

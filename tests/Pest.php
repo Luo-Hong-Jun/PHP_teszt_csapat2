@@ -11,9 +11,14 @@
 |
 */
 
+// Feature tests need the database migrated.
 pest()->extend(Tests\TestCase::class)
- // ->use(Illuminate\Foundation\Testing\RefreshDatabase::class)
+    ->use(Illuminate\Foundation\Testing\RefreshDatabase::class)
     ->in('Feature');
+
+// Unit tests don't require the RefreshDatabase trait by default.
+pest()->extend(Tests\TestCase::class)
+    ->in('Unit');
 
 /*
 |--------------------------------------------------------------------------

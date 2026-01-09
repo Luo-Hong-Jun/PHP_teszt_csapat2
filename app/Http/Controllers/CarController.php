@@ -97,7 +97,7 @@ class CarController extends Controller
 
     public function findByName($name) {
         $cars = Car::where('Name', 'like', '%'.$name.'%')->get();
-        if ($cars)
+        if ($cars->isNotEmpty() && $cars)
         {
             return $cars;
         }
